@@ -28,16 +28,7 @@ class _NavigationPageState extends State<NavigationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 101, 65, 40),
-        title: Padding(
-          padding: const EdgeInsets.only(left:75.0),
-          child: Text(
-            "Hot or Cold",
-          ),
-        ),
-        leading: Icon(Icons.menu),
-      ),
+      
       body: pages[currentSelectedIndex],
       bottomNavigationBar: GNav(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -46,10 +37,10 @@ class _NavigationPageState extends State<NavigationPage> {
         tabBorderRadius: 30,
         padding: EdgeInsets.all(15),
         tabMargin: EdgeInsets.symmetric(vertical: 8),
-        backgroundColor: Colors.brown.shade100,
-        tabBackgroundColor: Color.fromARGB(255, 101, 65, 40) ,
+        backgroundColor: Colors.grey.shade100,
+        tabBackgroundColor: Color.fromARGB(255, 0, 0, 0) ,
         activeColor: Color.fromARGB(255, 250, 250, 250) ,
-        tabActiveBorder: Border.all(color: Color.fromARGB(255, 101, 65, 40)),
+        tabActiveBorder: Border.all(color: Color.fromARGB(255, 0, 0, 0)),
         selectedIndex: currentSelectedIndex,
         onTabChange: (index)=>{
           setState(() {

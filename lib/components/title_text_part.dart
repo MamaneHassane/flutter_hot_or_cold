@@ -15,7 +15,7 @@ class TitleTextPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       '$text ',
-      style : GoogleFonts.maidenOrange(
+      style : GoogleFonts.abel(
         fontSize: 50,
         fontWeight: FontWeight.bold,
         color: color,
