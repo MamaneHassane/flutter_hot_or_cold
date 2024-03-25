@@ -12,13 +12,12 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+    return 
+      
         Container(     
                   decoration: BoxDecoration(
                     color: Colors.black,
-                    borderRadius: BorderRadius.circular(20)
+                    // borderRadius: BorderRadius.circular(20)
                   ),
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Row(
@@ -81,9 +80,7 @@ class CustomAppBar extends StatelessWidget {
                           ),
                         ),
                     ],),
-                ),
-      ],
-    );
-    
+                );
+
   }
 }

@@ -27,8 +27,7 @@ class _NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      
+      backgroundColor: Colors.white,
       body: pages[currentSelectedIndex],
       bottomNavigationBar: GNav(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -37,9 +36,9 @@ class _NavigationPageState extends State<NavigationPage> {
         tabBorderRadius: 30,
         padding: EdgeInsets.all(15),
         tabMargin: EdgeInsets.symmetric(vertical: 8),
-        backgroundColor: Colors.grey.shade100,
+        backgroundColor: Colors.white,
         tabBackgroundColor: Color.fromARGB(255, 0, 0, 0) ,
-        activeColor: Color.fromARGB(255, 250, 250, 250) ,
+        activeColor: Colors.white ,
         tabActiveBorder: Border.all(color: Color.fromARGB(255, 0, 0, 0)),
         selectedIndex: currentSelectedIndex,
         onTabChange: (index)=>{

@@ -8,7 +8,7 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100] ,
+      backgroundColor: Colors.white ,
       body: Center(child: Text("S E T T I N G S  P A G E"),),
     );
   }
