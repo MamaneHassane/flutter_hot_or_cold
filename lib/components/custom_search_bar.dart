@@ -4,11 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomSearchBar extends StatelessWidget {
-  final Function onSearch;
+
   const CustomSearchBar({
     super.key,
     required this.autoFillForSearchBar,
-    required this.onSearch
   });
 
   final Iterable<String>? autoFillForSearchBar;
@@ -53,7 +52,7 @@ class CustomSearchBar extends StatelessWidget {
             suffixIcon: GestureDetector(
               onTap: () => {
                 // Commencer la recherche
-                onSearch
+                
               },
               child: Icon(
                 Icons.search,

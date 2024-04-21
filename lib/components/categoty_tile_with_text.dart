@@ -6,13 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 class CategoryTileWithText extends StatelessWidget {
   final String title;
   final String text;
-  final Function onTapOnText;
 
   const CategoryTileWithText({
     super.key,
     required this.title,
     required this.text,
-    required this.onTapOnText
   });
 
   @override
@@ -30,17 +28,14 @@ class CategoryTileWithText extends StatelessWidget {
                 fontSize : 25
             ),
           ),
-          GestureDetector(
-            child: Text(
-              text,
-              style : GoogleFonts.abel(
-                color : Colors.pink,
-                fontSize : 20,
-                fontWeight : FontWeight.bold,
-                fontStyle : FontStyle.italic
-              )
-            ),
-            onTap: ()=>{onTapOnText},
+          Text(
+            text,
+            style : GoogleFonts.abel(
+              color : Colors.pink,
+              fontSize : 20,
+              fontWeight : FontWeight.bold,
+              fontStyle : FontStyle.italic
+            )
           )
         ],
       ),

@@ -12,93 +12,97 @@ class AppOpeningPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),   
       body: SafeArea(
-        child: Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "How do you want your next drink ?",
-                  style: GoogleFonts.abel(
-                  color : Colors.pink,
-                  fontSize : 25,
-                  fontWeight : FontWeight.bold,
-                ),
-                ), 
-                SizedBox(height: 25,),
-                Center(
-                  child: Image.asset(
-                    'lib/animations/tea.gif',
-                    height: 400
-                  ),
-                ),
-                
-                  Row(
-                  
+        child: Column(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TitleTextPart(
-                      text : 'Hot',
-                      color : Colors.red
+                    Text(
+                      "How do you want your next drink ?",
+                      style: GoogleFonts.abel(
+                      color : Colors.pink,
+                      fontSize : 25,
+                      fontWeight : FontWeight.bold,
                     ),
-                    TitleTextPart(
-                      text : 'Or',
-                      color : Colors.black
+                    ), 
+                    SizedBox(height: 25,),
+                    Center(
+                      child: Image.asset(
+                        'lib/animations/tea.gif',
+                        height: 400
+                      ),
                     ),
-                    TitleTextPart(
-                      text : 'Cold',
-                      color : Color.fromARGB(255, 25, 170, 238)
+                    
+                      Row(
+                      
+                      children: [
+                        TitleTextPart(
+                          text : 'Hot',
+                          color : Colors.red
+                        ),
+                        TitleTextPart(
+                          text : 'Or',
+                          color : Colors.black
+                        ),
+                        TitleTextPart(
+                          text : 'Cold',
+                          color : Color.fromARGB(255, 25, 170, 238)
+                        ),
+                        TitleTextPart(
+                          text : '?',
+                          color : Colors.black
+                        )
+                        
+                      ],
                     ),
-                    TitleTextPart(
-                      text : '?',
-                      color : Colors.black
-                    )
+                    Text(
+                      "Feeling thirsty? Command yourself a drink from home !",
+                      style: GoogleFonts.abel(
+                        color : Colors.black,
+                        fontSize : 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Spacer(),
+                    GestureDetector(
+                      onTap: () => {
+                        Navigator.pushNamed(context, 'navigation')
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color : Color.fromARGB(255, 0, 0, 0) ,
+                          borderRadius: BorderRadius.circular(12)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Row(  
+                            mainAxisAlignment: MainAxisAlignment.center,           
+                            children: [
+                              Text(
+                                "Get started ",
+                                style: GoogleFonts.abel(
+                                  fontSize : 25,
+                                  color : Colors.white,
+                                  fontWeight :FontWeight.bold,
+                                ),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios_rounded,
+                                color: Colors.white,
+                              )
+                          ],),
+                        ),
+                      ),
+                    ),
                     
                   ],
                 ),
-                Text(
-                  "Feeling thirsty? Command yourself a drink from home !",
-                  style: GoogleFonts.abel(
-                    color : Colors.black,
-                    fontSize : 25,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () => {
-                    Navigator.pushNamed(context, 'navigation')
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color : Color.fromARGB(255, 0, 0, 0) ,
-                      borderRadius: BorderRadius.circular(12)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(  
-                        mainAxisAlignment: MainAxisAlignment.center,           
-                        children: [
-                          Text(
-                            "Get started ",
-                            style: GoogleFonts.abel(
-                              fontSize : 25,
-                              color : Colors.white,
-                              fontWeight :FontWeight.bold,
-                            ),
-                          ),
-                          Icon(
-                            Icons.arrow_forward_ios_rounded,
-                            color: Colors.white,
-                          )
-                      ],),
-                    ),
-                  ),
-                ),
-                
-              ],
+              ),
             ),
-          ),
+          ],
         )
         
       ,)

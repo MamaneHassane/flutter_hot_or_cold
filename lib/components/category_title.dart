@@ -6,12 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 class CategoryTitle extends StatelessWidget {
 
   final String title;
-  final Function onTapOnIcon;
 
   const CategoryTitle({
     super.key,
     required this.title,
-    required this.onTapOnIcon,
   });
 
   @override
@@ -29,13 +27,10 @@ class CategoryTitle extends StatelessWidget {
                       fontSize : 25
                     ),
                   ),
-                  GestureDetector(
-                    child: Icon(
-                      Icons.arrow_forward_outlined,
-                      color: Colors.black,
-                      size: 30,
-                    ),
-                    onTap: ()=>{onTapOnIcon},
+                  Icon(
+                    Icons.arrow_forward_outlined,
+                    color: Colors.black,
+                    size: 30,
                   )
                 ],
               ),
